@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07141c">
+  <title>Computer Shortcuts Test | Netprox</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="computer-shortcuts-questions.js" defer></script>
+  <script src="quiz-runtime.js" defer></script>
+</head>
+<body data-base="./" data-duration-minutes="15">
+  <header class="topbar">
+    <a class="brand" href="./index.html" aria-label="Netprox home"><img src="assets/netprox-logo.png" alt="Netprox"></a>
+    <span class="brand-caption">LEARN • WORK • GROW</span>
+  </header>
+  <main id="top" class="shell">
+    <section id="welcome" class="welcome card">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> SKILLS CHECK</div>
+      <h1>Computer<br><span>Shortcuts Test</span></h1>
+      <p class="intro">Check your knowledge of useful keyboard shortcuts. Enter your username, then choose the best answer for each question.</p>
+      <div class="summary-grid">
+        <div><strong>20</strong><span>Questions</span></div>
+        <div><strong>15</strong><span>Minutes</span></div>
+        <div><strong>100</strong><span>Total points</span></div>
+      </div>
+      <label class="student-name-label" for="student-username">Username<input id="student-username" name="username" type="text" autocomplete="username" maxlength="30" required></label>
+      <div class="welcome-note"><span class="note-icon">✓</span><span>Each question has one correct answer. You can move between questions before submitting.</span></div>
+      <button id="start-btn" class="primary-btn" type="button">Start the test <span aria-hidden="true">→</span></button>
+    </section>
+    <section id="quiz" class="quiz card" hidden aria-live="polite">
+      <div class="quiz-topline">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> COMPUTER SHORTCUTS</div>
+        <div id="timer" class="timer" aria-label="Time remaining"><span class="timer-icon" aria-hidden="true">◷</span> <span id="time-text">15:00</span></div>
+      </div>
+      <div class="progress-meta"><span id="question-count">Question 1 of 20</span><span id="answered-count">0 answered</span></div>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+      <div id="question-area"></div>
+      <div class="quiz-nav">
+        <button id="prev-btn" class="secondary-btn" type="button">← Previous</button>
+        <div class="nav-right"><button id="next-btn" class="primary-btn" type="button">Next question <span aria-hidden="true">→</span></button><button id="submit-btn" class="submit-btn" type="button" hidden>Finish test</button></div>
+      </div>
+      <p class="keyboard-tip">Choose an answer by clicking an option. Your answers are saved as you go.</p>
+    </section>
+    <section id="result" class="result card" hidden aria-live="polite"></section>
+    <footer>NETPROX <span>•</span> COMPUTER SHORTCUTS TEST</footer>
+  </main>
+</body>
+</html>
